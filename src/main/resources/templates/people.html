@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, people-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Trang chủ</h1>
+
+<h2>Thông tin people</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>FullName</th>
+        <th>Job</th>
+        <th>Gender</th>
+        <th>City</th>
+        <th>Salary</th>
+        <th>Birthday</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="people: ${peoples}">
+        <td th:text="${people.id}">ID</td>
+        <td th:text="${people.fullname}">Name</td>
+        <td th:text="${people.job}">Age</td>
+        <td th:text="${people.gender}"></td>
+        <td th:text="${people.city}">
+        <td th:text="${people.salary}">
+        <td th:text="${people.birthday}">
+<!--        <td>-->
+<!--            &lt;!&ndash;   /peoples/{id}   &ndash;&gt;-->
+<!--            <a th:href="@{/peoples/{id} (id = ${people.id})}">Xem chi tiet</a>-->
+<!--        </td>-->
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
